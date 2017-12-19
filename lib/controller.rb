@@ -18,9 +18,11 @@ class Controller
       self.restart?
     when "2"
       self.play_first?
+      self.restart?
     when "3"
       game = Game.new
       game.play
+      self.restart?
     else
       self.start unless answer == "4"
     end
