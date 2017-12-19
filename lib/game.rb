@@ -46,19 +46,19 @@ class Game
   def play
     self.turn until over?
     puts self.winner ? "Congratulations #{self.winner}!" : "Cat's Game!"
-    self.restart?
+    # self.restart?
   end
 
-  def restart?
-    puts "Would you like to play again? (Y/N)"
-    answer = gets.strip
-    case answer
-    when "Y"
-      Controller.new.start
-    when "N"
-      exit
-    else
-      self.restart?
-    end
-  end
+  # def restart?
+  #   puts "Would you like to play again? (Y/N)"
+  #   answer = gets.strip
+  #   case answer
+  #   when "Y"
+  #     Controller.new.start
+  #   when "N"
+  #     exit
+  #   else
+  #     self.restart?
+  #   end
+  # end
 end
