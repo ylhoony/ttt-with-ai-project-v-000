@@ -15,6 +15,7 @@ class Controller
       player_2 = Players::Computer.new("O")
       game = Game.new(player_1, player_2)
       game.play
+      self.restart?
     when "2"
       self.play_first?
     when "3"
