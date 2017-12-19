@@ -43,4 +43,17 @@ class Controller
       self.play_first?
     end
   end
+
+  def restart?
+    puts "Would you like to play again? (Y/N)"
+    answer = gets.strip
+    case answer
+    when "Y"
+      Controller.new.start
+    when "N"
+      exit
+    else
+      self.restart?
+    end
+  end
 end
